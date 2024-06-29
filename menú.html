@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="shadow"></div>
+      <div class="container">
+        <a href="index.html" id="logo"
+          ><img class="fotoLogo" src="img/logo.png" alt="logoCafe"
+        /></a>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca</a></li>
+            <li><a href="menú.html" class="active">Menú</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><div class="dark-btn"></div></li>
+          </ul>
+        </nav>
+        <span class="burger-ico">&#9776;</span>
+      </div>
+    </header>
+    <main>
+      <section class="colums container">
+        <article id="extraArticle">
+          <h2>Bienvenidos a el menú de El Rincón</h2>
+          <p>
+            En El Rincón, ofrecemos una experiencia acogedora con una variedad
+            de cafés y tés, deliciosos brunches, y una gran selección de
+            repostería. Nuestro menú ha sido cuidadosamente diseñado para
+            deleitar todos tus sentidos, combinando ingredientes de la más alta
+            calidad con la pasión de nuestros baristas y reposteros. Sumérgete
+            en un viaje de sabores con nuestras opciones de desayunos y
+            almuerzos, donde cada plato está elaborado para ofrecerte una
+            experiencia culinaria única. Desde un espresso intenso hasta un té
+            aromático, cada bebida es preparada con dedicación y maestría.
+            Acompaña tu bebida favorita con uno de nuestros irresistibles
+            postres artesanales, creados para satisfacer cualquier antojo. Te
+            invitamos a explorar nuestro menú y descubrir tus nuevos favoritos.
+            En El Rincón, cada visita es una celebración de los pequeños
+            placeres de la vida.
+          </p>
+        </article>
+      </section>
+      <section>
+        <div class="img">
+        <img src="img/MENU.png" alt="MENU">
+    </div>  
+    </section>
+      <h2>Nuestra selección de té y café</h2>
+      <section class="equipo">
+        <article>
+            <h3>Espresso</h3>
+          <img id="imgMenu" src="img/menú1.jpeg" alt="espresso">
+        </article>
+        <article>
+            <h3>Latte</h3>
+            <img id="imgMenu" src="img/menú2.jpeg" alt="latte">
+          </article>
+          <article>
+            <h3>Capuccino</h3>
+            <img id="imgMenu" src="img/menú3.jpeg" alt="capuccino">
+          </article>
+          <article>
+            <h3>Mocha</h3>
+            <img id="imgMenu" src="img/menú4.jpeg" alt="mocha">
+          </article>
+          <article>
+            <h3>Macchiato</h3>
+            <img id="imgMenu" src="img/menú5.jpeg" alt="macchiato">
+          </article>
+      </section>
+      <section class="equipo">
+        <article>
+            <h3>Irish coffee</h3>
+          <img id="imgMenu" src="img/menú6.jpeg" alt="irish">
+        </article>
+        <article>
+            <h3>Té negro</h3>
+            <img id="imgMenu" src="img/menú7.jpeg" alt="te1">
+          </article>
+          <article>
+            <h3>Té verde</h3>
+            <img id="imgMenu" src="img/menú8.jpeg" alt="te2">
+          </article>
+          <article>
+            <h3>Té de frutos rojos</h3>
+            <img id="imgMenu" src="img/menú9.jpeg" alt="te3">
+          </article>
+          <article>
+            <h3>Té de limón</h3>
+            <img id="imgMenu" src="img/menú10.jpeg" alt="te4">
+          </article>
+      </section>
+      <h2>Repostería</h2>
+      <section class="equipo">
+        <article>
+            <h3>Macarons</h3>
+            <img id="imgMenu" src="img/repost1.jpeg" alt="macarons">
+        </article>
+        <article>
+            <h3>Cheescake de frutos rojos</h3>
+            <img id="imgMenu" src="img/repost2.jpeg" alt="cheescake">
+        </article>
+        <article>
+            <h3>Variedad de muffins</h3>
+            <img id="imgMenu" src="img/repost3.jpeg" alt="muffins">
+        </article>
+        <article>
+            <h3>Brownies</h3>
+            <img id="imgMenu" src="img/repost4.jpeg" alt="brownies">
+        </article>
+        <article>
+            <h3>Tostada de palta</h3>
+            <img id="imgMenu" src="img/repost5.jpeg" alt="tostada">
+        </article>
+      </section>
+    </main>
+    <footer></footer>
+    <script>
+      // Menú Lateral:
+      let nav = document.querySelector("nav");
+      let burguerIco = document.querySelector(".burger-ico");
+      let shadow = document.querySelector(".shadow");
+
+      let menuToggle = () => {
+        nav.classList.toggle("show-menu");
+        burguerIco.classList.toggle("burger-active");
+        shadow.classList.toggle("shadow-active");
+      };
+
+      burguerIco.addEventListener("click", menuToggle);
+      shadow.addEventListener("click", menuToggle);
+
+      // Cambiador de Modo Claro a Oscuro:
+      let darkBtn = document.querySelector(".dark-btn");
+      let body = document.body;
+
+      darkBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        darkBtn.classList.toggle("dark-btn-active");
+      });
+    </script>
+  </body>
+</html>
